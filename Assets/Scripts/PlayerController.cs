@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public float jumpForce;
     public float gravityModifier;
+    public GameObject PowerupIndicator;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float forwardInput = Input.GetAxis("Horizontal");
         playerRb.AddForce(Vector2.right * speed * forwardInput);
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
